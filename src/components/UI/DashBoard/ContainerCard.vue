@@ -3,7 +3,7 @@
     <b-container>
       <b-row>
         <b-col xl="3">
-          <card></card>
+        <card></card>
         </b-col>
         <b-col xl="3">
         </b-col>
@@ -21,6 +21,9 @@ import Card from '@/components/UI/DashBoard/Card'
 Vue.use(Card)
 export default {
   name: 'ContainerCard',
+  components: {
+    Card
+  },
   data: () => ({
 
   })
