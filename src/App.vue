@@ -10,10 +10,9 @@
           <span>Paper Dashboard</span>
         </div>
         <ul class="navLink">
-          <li><i class="fa fa-thumbs-up" aria-hidden="true"></i></li>
           <li><a href="#">dashboard</a></li>
           <li><a href="#">user profile</a></li>
-          <li><a href="#"><icon name="envelope"></icon>table list</a></li>
+          <li><a href="#">table list</a></li>
           <li><a href="#">typography</a></li>
           <li><a href="#">icons</a></li>
           <li><a href="#">maps</a></li>
@@ -44,8 +43,10 @@
                 </li>
                 <li><a href="#">Notifications</a></li>
               </ul>
+
             </div>
           </div>
+          <router-view/>
         </div>
 
       </div>
@@ -58,13 +59,9 @@ import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import Icon from 'vue-awesome/components/Icon'
 Vue.use(BootstrapVue)
 export default {
-  name: 'app',
-  components: Icon,
-  data () {
-  }
+  name: 'app'
 }
 </script>
 

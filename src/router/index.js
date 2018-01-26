@@ -5,7 +5,7 @@ import HashMd5 from '@/components/hash/HashMd5'
 import HashSha1 from '@/components/hash/HashSha1'
 import HashSha256 from '@/components/hash/HashSha256'
 import SideBar from '@/components/UI/SideBar/SideBar'
-
+import ContainerCard from '@/components/UI/DashBoard/ContainerCard'
 Vue.use(Router)
 
 export default new Router({
@@ -35,6 +35,12 @@ export default new Router({
         component: HashSha256,
         name: 'Hash.Sha256'
       }]
+    },
+    {
+      path: '/testcard',
+      component: ContainerCard,
+      name: 'ContainerCard'
+
     }
   ]
 })

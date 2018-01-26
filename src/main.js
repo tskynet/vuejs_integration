@@ -3,13 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Icon from 'vue-awesome/icons'
+import ContainerCard from '@/components/UI/DashBoard/ContainerCard'
 Vue.config.productionTip = false
-Vue.component('icon', Icon)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App, ContainerCard }
 })
