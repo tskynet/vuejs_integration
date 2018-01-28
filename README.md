@@ -6,9 +6,9 @@
 
 npm install bootstrap-vue
 
-npm install vue-icons
-
 npm install vue-awesome
+
+npm install vue-chart-js --save
 
 ## Build Setup
 
