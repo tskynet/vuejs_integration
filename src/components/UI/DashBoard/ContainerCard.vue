@@ -1,15 +1,18 @@
 <template>
-  <div id="ContainerCard">
-    <b-container>
-      <b-row>
-        <b-col xl="3">
+  <div id="containerCard">
+    <b-container class="containerCards">
+      <b-row class="rowCards">
+        <b-col lg="3" sm="6">
         <card></card>
         </b-col>
-        <b-col xl="3">
+        <b-col lg="3" sm="6">
+          <card></card>
         </b-col>
-        <b-col xl="3">
+        <b-col lg="3" sm="6">
+          <card></card>
         </b-col>
-        <b-col xl="3">
+        <b-col lg="3" sm="6">
+          <card></card>
         </b-col>
       </b-row>
     </b-container>
@@ -30,4 +33,10 @@ export default {
 }
 </script>
 <style scoped>
+#containerCard .containerCards{
+  max-width:none;
+}
+#containerCard .containerCards .rowCards{
+  max-width:none;
+}
 </style>

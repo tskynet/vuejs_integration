@@ -10,13 +10,13 @@
           <span>Paper Dashboard</span>
         </div>
         <ul class="navLink">
-          <li><a href="#"><icon name="tachometer"></icon>dashboard</a></li>
-          <li><a href="#"><icon name="user"></icon>user profile</a></li>
-          <li><a href="#">table list</a></li>
-          <li><a href="#">typography</a></li>
-          <li><a href="#">icons</a></li>
-          <li><a href="#">maps</a></li>
-          <li><a href="#">notifications</a></li>
+          <li><a href="#"><icon class="iconNav" name="tachometer"></icon>dashboard</a></li>
+          <li><a href="#"><icon class="iconNav" name="user"></icon>user profile</a></li>
+          <li><a href="#"><icon class="iconNav" name="list"></icon>table list</a></li>
+          <li><a href="#"><icon class="iconNav" name="text-width"></icon>typography</a></li>
+          <li><a href="#"><icon class="iconNav" name="pencil"></icon>icons</a></li>
+          <li><a href="#"><icon class="iconNav" name="map-o"></icon>maps</a></li>
+          <li><a href="#"><icon class="iconNav" name="bell-o"></icon>notifications</a></li>
         </ul>
 
 
@@ -56,12 +56,8 @@
 
 <script>
 import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
-Vue.use(BootstrapVue)
 Vue.use(Icon)
 export default {
   name: 'app',
@@ -82,7 +78,7 @@ export default {
   text-align:center;
 }
 #app a{
-  font-family: Muli, Helvetica, Arial, sans-serif;
+  font-family: 'Muli', Helvetica, Arial, sans-serif;
 }
 #app .sideBar{
   background: #212120;
@@ -116,13 +112,23 @@ export default {
   list-style:none;
   padding:0;
 }
+#app .sideBar .navLink .iconNav{
+  font-size:24px;
+  font-weight:bold;
+  margin-right: 15px;
+  float:left;
+  height:30px;
+  width:30px;
+}
 #app .sideBar .navLink li{
   text-transform: uppercase;
-  text-align:center;
-  padding:10px 0 10px 0;
+  padding:10px 25px 10px 25px;
   margin:10px 0 10px 0;
+  opacity:0.7;
+  font-weight:bold;
 }
 #app .sideBar .navLink li a{
+  display:block;
   color:white;
   font-size:12px;
   line-height:30px;
