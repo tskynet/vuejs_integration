@@ -6,6 +6,7 @@ import HashSha1 from '@/components/hash/HashSha1'
 import HashSha256 from '@/components/hash/HashSha256'
 import SideBar from '@/components/UI/SideBar/SideBar'
 import ContainerCard from '@/components/UI/DashBoard/ContainerCard'
+import UserBehavior from '@/components/UI/DashBoard/UserBehavior'
 Vue.use(Router)
 
 export default new Router({
@@ -41,6 +42,11 @@ export default new Router({
       component: ContainerCard,
       name: 'ContainerCard'
 
+    },
+    {
+      path: '/testbehavior',
+      component: UserBehavior,
+      name: 'UserBehavior'
     }
   ]
 })
