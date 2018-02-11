@@ -10,7 +10,7 @@
           <span>Paper Dashboard</span>
         </div>
         <ul class="navLink">
-          <li><a href="#"><i class="ti-panel"></i><router-link :to="{name:'ContainerCard'}">dashboard</router-link></a></li>
+          <li><a href="#"><i class="ti-panel"></i><router-link :to="{name:'ContainerDashBoard'}">dashboard</router-link></a></li>
           <li><a href="#"><i class="ti-user"></i>user profile</a></li>
           <li><a href="#"><i class="ti-view-list-alt"></i>table list</a></li>
           <li><a href="#"><i class="ti-text"></i>typography</a></li>
@@ -29,10 +29,11 @@
             </div>
             <div class="navBarRight">
               <ul class="nav navbar-right">
-                <li><a href="#">Stats</a></li>
+                <li><a href="#"><i class="ti-panel"></i>Stats</a></li>
                 <li>
                   <a href="#">
-                    <b-dropdown id="dropDown" text="Settings" icon="ti-bell">
+                    <i class="ti-bell"></i>
+                    <b-dropdown id="dropDown" text="Notifications" icon="ti-bell">
                       <b-dropdown-item>Notification 1</b-dropdown-item>
                       <b-dropdown-item>Notification 2</b-dropdown-item>
                       <b-dropdown-item>Notification 3</b-dropdown-item>
@@ -41,7 +42,7 @@
                     </b-dropdown>
                   </a>
                 </li>
-                <li><a href="#">Notifications</a></li>
+                <li><a href="#"><i class="ti-settings"></i>Settings</a></li>
               </ul>
 
             </div>
