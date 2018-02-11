@@ -10,13 +10,13 @@
           <span>Paper Dashboard</span>
         </div>
         <ul class="navLink">
-          <li><a href="#"><icon class="iconNav" name="tachometer"></icon>dashboard</a></li>
-          <li><a href="#"><icon class="iconNav" name="user"></icon>user profile</a></li>
-          <li><a href="#"><icon class="iconNav" name="list"></icon>table list</a></li>
-          <li><a href="#"><icon class="iconNav" name="text-width"></icon>typography</a></li>
-          <li><a href="#"><icon class="iconNav" name="pencil"></icon>icons</a></li>
-          <li><a href="#"><icon class="iconNav" name="map-o"></icon>maps</a></li>
-          <li><a href="#"><icon class="iconNav" name="bell-o"></icon>notifications</a></li>
+          <li><a href="#"><i class="ti-panel"></i><router-link :to="{name:'ContainerCard'}">dashboard</router-link></a></li>
+          <li><a href="#"><i class="ti-user"></i>user profile</a></li>
+          <li><a href="#"><i class="ti-view-list-alt"></i>table list</a></li>
+          <li><a href="#"><i class="ti-text"></i>typography</a></li>
+          <li><a href="#"><i class="ti-pencil-alt2"></i>icons</a></li>
+          <li><a href="#"><i class="ti-map"></i>maps</a></li>
+          <li><a href="#"><i class="ti-bell"></i>notifications</a></li>
         </ul>
 
 
@@ -112,7 +112,7 @@ export default {
   list-style:none;
   padding:0;
 }
-#app .sideBar .navLink .iconNav{
+#app .sideBar .navLink i{
   font-size:24px;
   font-weight:bold;
   margin-right: 15px;
@@ -128,7 +128,6 @@ export default {
   font-weight:bold;
 }
 #app .sideBar .navLink li a{
-  display:block;
   color:white;
   font-size:12px;
   line-height:30px;

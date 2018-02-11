@@ -28,7 +28,7 @@ Vue.use(Icon)
 export default {
   name: 'Card',
   data: () => ({
-
+    parentMsg: ''
   }),
   components: {
     Icon

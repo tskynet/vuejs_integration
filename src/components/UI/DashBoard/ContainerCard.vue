@@ -3,7 +3,7 @@
     <b-container class="containerCards">
       <b-row class="rowCards">
         <b-col lg="3" sm="6">
-        <card></card>
+        <card v-bind:my-message="parentMsg"></card>
         </b-col>
         <b-col lg="3" sm="6">
           <card></card>
@@ -28,7 +28,8 @@ export default {
     Card
   },
   data: () => ({
-
+    parentMsg: 'Welcome to Your Vue.js App',
+    cards: ['test', 'test2']
   })
 }
 </script>
