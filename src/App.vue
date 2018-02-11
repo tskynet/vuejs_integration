@@ -133,6 +133,10 @@ export default {
   font-size:12px;
   line-height:30px;
 }
+#app .sideBar .navLink li a:hover{
+    color:#41B883;
+    text-decoration:none;
+}
 /*right side*/
 #app .mainPanel{
   width : calc(100% - 260px) !important;
@@ -175,6 +179,10 @@ export default {
   font-size:16px;
   color:rgb(154,154,154);
   line-height:22.85px;
+}
+#app .mainPanel .navBar .containerNavBar .navBarRight ul li a:hover{
+  color:#68B3C8;
+  text-decoration: none;
 }
 #app .mainPanel .navBar .containerNavBar .navBarRight ul li a #dropDown{
   margin:0 !important
