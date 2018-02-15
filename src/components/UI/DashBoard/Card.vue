@@ -8,9 +8,12 @@
         <b-col cols="7">
           <div class="title">
             <p>Capacity</p>
-            <span>105GB</span>
+            <span>{{ capacityGB }}</span> <span class="caption">GB</span>
           </div>
         </b-col>
+      </b-row>
+      <b-row md="auto">
+        <span class="caption">{{ cardText }}</span>
       </b-row>
       <hr>
       <footer>
@@ -20,21 +23,25 @@
     </b-container>
   </div>
 </template>
+
 <script>
 import Vue from 'vue'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
+
 Vue.use(Icon)
+
 export default {
   name: 'Card',
-  data: () => ({
-    parentMsg: ''
-  }),
+  // Ce Component accepte les propriétés suivantes:
+  props: ['capacityGB', 'cardText'],
+  data: () => ({ }),
   components: {
     Icon
   }
 }
 </script>
+
 <style scoped>
 .card{
   font-size:22px;
@@ -83,5 +90,9 @@ export default {
 }
 .card footer span{
   vertical-align:-50%;
+}
+.card .caption {
+  font-size: 80% !important;
+  color: rgb(220, 120, 80);
 }
 </style>
