@@ -3,22 +3,19 @@
     <b-container class="content">
       <b-row md="auto">
         <b-col class="colIcon" cols="5">
-          <icon class="iconCard" name="database"></icon>
+          <i :class="icon" :style="colorIcon"></i>
         </b-col>
         <b-col cols="7">
           <div class="title">
-            <p>Capacity</p>
-            <span>{{ capacityGB }}</span> <span class="caption">GB</span>
+            <p>{{ valueName }}</p>
+            <span>{{ valueText }}</span>
           </div>
         </b-col>
-      </b-row>
-      <b-row md="auto">
-        <span class="caption">{{ cardText }}</span>
       </b-row>
       <hr>
       <footer>
         <icon class="iconFooter" name="clock-o"></icon>
-        <span>Last Day</span>
+        <span>{{ cardText }}</span>
       </footer>
     </b-container>
   </div>
@@ -30,16 +27,18 @@ import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 
 Vue.use(Icon)
-
 export default {
   name: 'Card',
   // Ce Component accepte les propriétés suivantes:
-  props: ['capacityGB', 'cardText'],
-  data: () => ({ }),
+  props: ['valueText', 'cardText', 'valueName', 'icon', 'colorIcon'],
+  data: () => ({
+    isTrue: true
+  }),
   components: {
     Icon
   }
 }
+console.log(this.icon)
 </script>
 
 <style scoped>
@@ -72,11 +71,10 @@ export default {
 .card .container .title span{
   font-size:28px;
 }
-.card .iconCard{
+.card i{
   font-weight:bold;
   color:rgb(243,187,69);
-  width:50px;
-  height:45px;
+  font-size:2em;
 }
 .card footer{
   font-size:14px;
