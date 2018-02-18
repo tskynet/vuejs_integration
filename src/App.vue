@@ -29,7 +29,7 @@
             </div>
             <div class="navBarRight">
               <ul class="nav navbar-right">
-                <li><a href="#"><i class="ti-panel"></i>Stats</a></li>
+                <li><a href="#"><i class="ti-panel"></i> Stats</a></li>
                 <li>
                   <a href="#">
                     <i class="ti-bell"></i>
@@ -42,7 +42,7 @@
                     </b-dropdown>
                   </a>
                 </li>
-                <li><a href="#"><i class="ti-settings"></i>Settings</a></li>
+                <li><a href="#"><i class="ti-settings"></i> Settings</a></li>
               </ul>
 
             </div>
