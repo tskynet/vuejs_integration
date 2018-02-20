@@ -11,7 +11,7 @@
         </div>
         <ul class="navLink">
           <li><a href="#"><i class="ti-panel"></i><router-link :to="{name:'ContainerDashBoard'}">dashboard</router-link></a></li>
-          <li><a href="#"><i class="ti-user"></i><router-link :to="{name:'ResumeClient'}">user profile</router-link></a></li>
+          <li><a href="#"><i class="ti-user"></i><router-link :to="{name:'UserProfileContainer'}">user profile</router-link></a></li>
           <li><a href="#"><i class="ti-view-list-alt"></i>table list</a></li>
           <li><a href="#"><i class="ti-text"></i>typography</a></li>
           <li><a href="#"><i class="ti-pencil-alt2"></i>icons</a></li>
