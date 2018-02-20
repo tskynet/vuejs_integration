@@ -7,7 +7,7 @@ import HashSha256 from '@/components/hash/HashSha256'
 import SideBar from '@/components/UI/SideBar/SideBar'
 import ContainerDashBoard from '@/components/UI/DashBoard/ContainerDashBoard'
 import UserBehavior from '@/components/UI/DashBoard/UserBehavior'
-import ResumeClient from '@/components/UI/UserProfile/ResumeClient'
+import UserProfileContainer from '@/components/UI/UserProfile/UserProfileContainer'
 Vue.use(Router)
 
 export default new Router({
@@ -51,8 +51,8 @@ export default new Router({
     },
     {
       path: '/testprofile',
-      component: ResumeClient,
-      name: 'ResumeClient'
+      component: UserProfileContainer,
+      name: 'UserProfileContainer'
     }
   ]
 })
