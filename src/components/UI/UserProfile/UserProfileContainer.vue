@@ -2,7 +2,12 @@
   <div id="userProfileContainer">
     <b-row>
       <b-col lg="4" md="5">
-        <ResumeClient></ResumeClient>
+        <div>
+          <ResumeClient></ResumeClient>
+        </div>
+        <div>
+          <TeamMemberList></TeamMemberList>
+        </div>
       </b-col>
       <b-col lg="8" md="7">
         <EditProfile></EditProfile>
@@ -13,11 +18,13 @@
 <script>
 import ResumeClient from '@/components/UI/UserProfile/ResumeClient'
 import EditProfile from '@/components/UI/UserProfile/EditProfile'
+import TeamMemberList from '@/components/UI/UserProfile/TeamMemberList'
 export default {
   name: 'UserProfileContainer',
   components: {
     ResumeClient,
-    EditProfile
+    EditProfile,
+    TeamMemberList
   },
   data: () => ({
 

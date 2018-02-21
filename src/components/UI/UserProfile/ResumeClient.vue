@@ -46,6 +46,7 @@ export default {
 #resumeClient{
   text-align:center;
   background:white;
+  margin-bottom:20px;
 }
 #resumeClient hr{
   margin-top:5px;

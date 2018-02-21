@@ -4,7 +4,7 @@
       <h4>Edit Profile</h4>
     </header>
     <div class="formProfile">
-      <b-form @submit="onSubmit">
+      <b-form>
         <b-row>
           <b-col md="5">
             <b-form-group id="compagnyEdit" label="Compagny">
@@ -68,7 +68,7 @@
         <b-row>
           <b-col>
             <div class="text-center">
-              <b-button :size="sm" :variant="primary">Update Profile</b-button>
+              <b-button>Update Profile</b-button>
             </div>
           </b-col>
         </b-row>
@@ -90,6 +90,12 @@ export default {
       city: 'New York',
       country: '',
       postal: ''
+    },
+    methods: {
+      onSubmit (event) {
+        event.preventDefault()
+        console.log(JSON.stringify(this.form))
+      }
     }
   })
 }
