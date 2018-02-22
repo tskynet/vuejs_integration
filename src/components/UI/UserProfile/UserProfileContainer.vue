@@ -1,6 +1,6 @@
 <template>
   <div id="userProfileContainer">
-    <b-row>
+    <b-row class="maxWidth">
       <b-col lg="4" md="5">
         <div>
           <ResumeClient></ResumeClient>
@@ -32,4 +32,9 @@ export default {
 }
 </script>
 <style scoped>
+#userProfileContainer .maxWidth{
+  width:100%;
+  padding:30px 15px 30px 15px;
+  margin:0;
+}
 </style>
