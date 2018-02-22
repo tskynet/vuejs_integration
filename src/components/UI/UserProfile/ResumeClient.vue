@@ -47,6 +47,9 @@ export default {
   text-align:center;
   background:white;
   margin-bottom:20px;
+  border-radius:6px;
+  box-shadow:0 2px 2px rgba(204, 197, 185, 0.5);
+  overflow:hidden;
 }
 #resumeClient hr{
   margin-top:5px;
@@ -89,14 +92,19 @@ export default {
   margin-bottom: 10px;
 }
 /*FOOTER*/
+#resumeClient .footerProfile{
+  padding-top:10px;
+  padding-bottom:10px;
+}
 #resumeClient .footerProfile h5{
-  font-size:24.5px;
   color:rgb(37,36,34);
-  font-weight:400px;
-  margin:0
+  font-weight:400;
+  margin:0;
+  font-size:18px;
 }
 #resumeClient .footerProfile span{
-  font-size:14px;
+  font-size:13px;
+  font-weight:300;
   color:#9A9A9A;
 }
 /*END FOOTER*/

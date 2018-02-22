@@ -70,7 +70,6 @@ export default {
 
 <style>
 #app {
-  margin-top:20px;
   margin-left:auto;
   margin-right:auto;
   font-size:0;
@@ -157,6 +156,7 @@ export default {
   margin-left:auto;
   min-height:75px;
   font-size:12px;
+  border-bottom:1px solid rgb(221,221,221);
 }
 #app .mainPanel .navBar .containerNavBar .navBarLeft{
   float:left;

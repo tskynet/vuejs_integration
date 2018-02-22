@@ -3,7 +3,7 @@
     <b-row>
       <b-col sm="3">
         <div class="image">
-          <img class="avatar" src="static/img/member.jpg" alt="test" />
+          <img class="avatar" v-bind:src="img" alt="test" />
         </div>
       </b-col>
       <b-col sm="6">
@@ -23,7 +23,7 @@
 <script>
 export default {
   name: 'MemberList',
-  props: ['status', 'textStatus', 'name'],
+  props: ['status', 'textStatus', 'name', 'img'],
   data: () => ({
 
   })

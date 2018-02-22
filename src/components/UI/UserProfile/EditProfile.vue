@@ -8,7 +8,7 @@
         <b-row>
           <b-col md="5">
             <b-form-group id="compagnyEdit" label="Compagny">
-              <b-form-input id="compagnyInput" type="text" v-model="form.compagny" required></b-form-input>
+              <b-form-input id="compagnyInput" type="text" v-model="form.compagny" required disabled="disabled"></b-form-input>
             </b-form-group>
           </b-col>
           <b-col md="3">

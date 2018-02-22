@@ -40,8 +40,10 @@ export default {
 <style scoped>
 #containerCard .containerCards{
   max-width:none;
+
 }
 #containerCard .containerCards .rowCards{
   max-width:none;
+  width:100%;
 }
 </style>
