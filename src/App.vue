@@ -74,8 +74,8 @@ export default {
   margin-right:auto;
   font-size:0;
   font-family:'Muli', Helvetica, Arial, sans-serif;
-  color:#66615b;
   box-sizing:border-box;
+  color:#66615b;
 }
 #app h1{
   text-align:center;
