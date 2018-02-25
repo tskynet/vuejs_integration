@@ -8,6 +8,7 @@ import SideBar from '@/components/UI/SideBar/SideBar'
 import ContainerDashBoard from '@/components/UI/DashBoard/ContainerDashBoard'
 import UserBehavior from '@/components/UI/DashBoard/UserBehavior'
 import UserProfileContainer from '@/components/UI/UserProfile/UserProfileContainer'
+import TableListContainer from '@/components/UI/TableList/TableListContainer'
 Vue.use(Router)
 
 export default new Router({
@@ -53,6 +54,11 @@ export default new Router({
       path: '/testprofile',
       component: UserProfileContainer,
       name: 'UserProfileContainer'
+    },
+    {
+      path: 'testTable',
+      component: TableListContainer,
+      name: 'TableListContainer'
     }
   ]
 })
