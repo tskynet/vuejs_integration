@@ -10,6 +10,7 @@ import UserBehavior from '@/components/UI/DashBoard/UserBehavior'
 import UserProfileContainer from '@/components/UI/UserProfile/UserProfileContainer'
 import TableListContainer from '@/components/UI/TableList/TableListContainer'
 import IconList from '@/components/UI/IconList/IconList'
+import Notification from '@/components/UI/Notification/Notification'
 Vue.use(Router)
 
 export default new Router({
@@ -65,6 +66,11 @@ export default new Router({
       path: 'testIcon',
       component: IconList,
       name: 'IconList'
+    },
+    {
+      path: 'testNotification',
+      component: Notification,
+      name: 'Notification'
     }
   ]
 })

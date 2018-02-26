@@ -47,8 +47,7 @@ export default {
 </script>
 <style scoped>
 #iconList{
- padding-left:30px;
- padding-right:30px;
+ padding:30px
 }
 #iconList .contentIcon{
   background:white;
