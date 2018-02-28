@@ -11,6 +11,7 @@ import UserProfileContainer from '@/components/UI/UserProfile/UserProfileContain
 import TableListContainer from '@/components/UI/TableList/TableListContainer'
 import IconList from '@/components/UI/IconList/IconList'
 import Notification from '@/components/UI/Notification/Notification'
+import PluginNotification from '@/components/UI/PluginNotification/PluginNotification'
 Vue.use(Router)
 
 export default new Router({
@@ -71,6 +72,11 @@ export default new Router({
       path: 'testNotification',
       component: Notification,
       name: 'Notification'
+    },
+    {
+      path: 'testplugin',
+      component: PluginNotification,
+      name: 'PluginNotification'
     }
   ]
 })

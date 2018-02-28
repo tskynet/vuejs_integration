@@ -17,6 +17,7 @@
           <li><a href="#"><router-link :to="{name:'IconList'}"><i class="ti-pencil-alt2"></i>icons</router-link></a></li>
           <li><a href="#"><i class="ti-map"></i>maps</a></li>
           <li><a href="#"><router-link :to="{name:'Notification'}"><i class="ti-bell"></i>notifications</router-link></a></li>
+          <li><a href="#"><router-link :to="{name:'PluginNotification'}"><i class="ti-bell"></i>notificationsplugin</router-link></a></li>
         </ul>
 
 
