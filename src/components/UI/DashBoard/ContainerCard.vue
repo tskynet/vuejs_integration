@@ -21,7 +21,8 @@
 
 <script>
 import Card from '@/components/UI/DashBoard/Card'
-
+console.log('test')
+console.log(updatedText[0])
 export default {
   name: 'ContainerCard',
   components: {

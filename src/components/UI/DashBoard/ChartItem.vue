@@ -8,12 +8,17 @@
 export default {
   name: 'ChartItem',
   methods: {
-    initChart () {
+    initChartItem () {
       var idChart = 'chartTest'
+      console.log(idChart)
       this.$ChartList[this.chartType](idChart, this.chartData, this.chartOption)
     }
   },
-  data: () => ({
+  mounted () {
+    this.initChartItem()
+  },
+  props: {
+    testing: 'test',
     chartType: {
       type: String,
       default: 'Line'
@@ -28,14 +33,11 @@ export default {
       type: Object,
       default: () => {
         return {
-          labels: ['Monday', 'Tuesday', 'Wednesday'],
-          series: [12, 9, 7]
+          labels: [],
+          series: []
         }
       }
     }
-  }),
-  mounted () {
-    this.$nextTick(this.initChartItem)
   }
 }
 </script>
