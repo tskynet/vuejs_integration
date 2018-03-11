@@ -1,43 +1,19 @@
 <template>
   <div id="chartItem">
     <h2>test</h2>
-    <svg id="chartTest" class="ct-chart-line"></svg>
+    <h3> {{ data }}</h3>
+    <hr  />
+    <line></line>
   </div>
 </template>
 <script>
+import { Line } from 'vue-chart-js'
 export default {
   name: 'ChartItem',
-  methods: {
-    initChartItem () {
-      var idChart = 'chartTest'
-      console.log(idChart)
-      this.$ChartList[this.chartType](idChart, this.chartData, this.chartOption)
-    }
-  },
+  extends: Line,
+  props: ['data', 'options'],
   mounted () {
-    this.initChartItem()
-  },
-  props: {
-    testing: 'test',
-    chartType: {
-      type: String,
-      default: 'Line'
-    },
-    chartOptions: {
-      type: Object,
-      default: () => {
-        return {}
-      }
-    },
-    chartData: {
-      type: Object,
-      default: () => {
-        return {
-          labels: [],
-          series: []
-        }
-      }
-    }
+    this.renderChart(this.data, this.options)
   }
 }
 </script>

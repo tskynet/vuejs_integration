@@ -1,11 +1,24 @@
 <template>
   <div id="containerChart">
-    <ChartItem v-bind:chartData="usersChart.data" v-bind:chartOptions="userCharts.options"></ChartItem>
+    <h2>test</h2>
+    <chart-item v-bind:data="this.usersChart.data" v-bind:options="this.usersChart.options" :width="400" :height="200"></chart-item>
   </div>
 </template>
 <script>
-console.log(this.usersChart)
 import ChartItem from '@/components/UI/DashBoard/ChartItem'
+
+const LINE_CHART_DATA_DEFAULT = {
+  labels: ['0', '5', '7.5', '10', '11', '12', '13', '15'],
+  datasets: [{
+    label: 'SES 3.4',
+    borderColor: '#0088FF',
+    data: ['128.940', '131.397', '132.235', '128.235', '125.636', '127.271', '125.667', '129.554']
+  }, {
+    label: 'SES 8.9',
+    borderColor: '#FF8800',
+    data: ['127.283', '125.147', '124.489', '116.783', '111.696', '110.563', '105.469', '104.332']
+  }]
+}
 export default {
   name: 'ContainerChart',
   components: {
@@ -13,27 +26,16 @@ export default {
   },
   data: () => ({
     usersChart: {
-      data: {
-        labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
-        series: [
-          [287, 385, 490, 562, 594, 626, 698, 895, 952],
-          [67, 152, 193, 240, 387, 435, 535, 642, 744],
-          [23, 113, 67, 108, 190, 239, 307, 410, 410]
-        ]
-      },
+      data: LINE_CHART_DATA_DEFAULT,
       options: {
-        low: 0,
-        high: 1000,
-        showArea: true,
-        height: '245px',
-        axisX: {
-          showGrid: false
-        },
-        showLine: true,
-        showPoint: false
+        responsive: true,
+        maintainAspectRatio: true
       }
     }
-  })
+  }),
+  created () {
+    console.log('!!ContainerChart usersCharts=', this.usersChart)
+  }
 }
 </script>
 <style scoped>
