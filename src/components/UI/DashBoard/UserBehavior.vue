@@ -26,7 +26,7 @@
 </template>
 <script>
 import Vue from 'vue'
-import VueChart from 'vue-chart-js'
+import VueChart from 'vue-chartjs'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 Vue.use(Icon)

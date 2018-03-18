@@ -3,11 +3,11 @@
     <h2>test</h2>
     <h3> {{ data }}</h3>
     <hr  />
-    <line></line>
+    <Line id="testingChart"></line>
   </div>
 </template>
 <script>
-import { Line } from 'vue-chart-js'
+import { Line } from 'vue-chartjs'
 export default {
   name: 'ChartItem',
   extends: Line,
