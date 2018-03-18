@@ -1,7 +1,6 @@
 <template>
-  <div id="containerChart">
-    <h2>test</h2>
-    <chart-item v-bind:data="this.usersChart.data" v-bind:options="this.usersChart.options" :width="400" :height="200"></chart-item>
+  <div id="containerChart"  style="position: relative; height:300px; width:100%">
+    <chart-item v-bind:data="this.usersChart.data" v-bind:options="this.usersChart.options" ></chart-item>
   </div>
 </template>
 <script>
@@ -35,8 +34,15 @@ export default {
   }),
   created () {
     console.log('!!ContainerChart usersCharts=', this.usersChart)
+  },
+  mounted () {
+    document.getElementById('line-chart').style.height = '245px'
   }
 }
 </script>
 <style scoped>
+#containerChart #line-chart{
+  width:100%;
+  height: 300px;
+}
 </style>

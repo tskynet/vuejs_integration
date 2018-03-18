@@ -5,7 +5,7 @@
       <p>24 Hours performance</p>
     </header>
     <div class="main">
-      <vue-chart class="chart" type="line" :data="chartData" :options="{responsive: false, maintainAspectRatio: false}" :height="200" :width="1200" ></vue-chart>
+      <ContainerChart></ContainerChart>
     </div>
     <footer>
       <div>
@@ -29,28 +29,17 @@ import Vue from 'vue'
 import VueChart from 'vue-chartjs'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
+import ContainerChart from '@/components/UI/DashBoard/containerChart'
 Vue.use(Icon)
 Vue.use(VueChart)
 export default {
   name: 'userBehavior',
   components: {
     VueChart,
-    Icon
+    Icon,
+    ContainerChart
   },
   data: () => ({
-    chartData: {
-      labels: ['Item 1', 'Item 2', 'Item 3'],
-      datasets: [
-        {
-          label: 'Component 1',
-          data: [10, 20, 30, 40, 50, 60, 70, 80, 90]
-        },
-        {
-          label: 'Component 2',
-          data: [20, 30, 40, 50, 60, 70, 80, 90, 100]
-        }
-      ]
-    }
   })
 }
 </script>
@@ -76,7 +65,6 @@ export default {
 }
 #userBehavior .main{
   height: 245px;
-  box-sizing: border-box;
 }
 #userBehavior .main .chart{
   height: 245px;

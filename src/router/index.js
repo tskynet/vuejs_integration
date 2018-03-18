@@ -12,7 +12,6 @@ import TableListContainer from '@/components/UI/TableList/TableListContainer'
 import IconList from '@/components/UI/IconList/IconList'
 import Notification from '@/components/UI/Notification/Notification'
 import PluginNotification from '@/components/UI/PluginNotification/PluginNotification'
-import ContainerChart from '@/components/UI/DashBoard/ContainerChart'
 Vue.use(Router)
 
 export default new Router({
@@ -78,11 +77,6 @@ export default new Router({
       path: 'testplugin',
       component: PluginNotification,
       name: 'PluginNotification'
-    },
-    {
-      path: 'testchart',
-      component: ContainerChart,
-      name: 'ContainerChart'
     }
   ]
 })
