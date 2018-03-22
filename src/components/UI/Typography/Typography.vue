@@ -1,6 +1,5 @@
 <template>
   <div id="typography">
-    <h2>test</h2>
     <div class="content">
 
       <div class="header">
@@ -132,6 +131,7 @@
             Lists
           </p>
           <b-row>
+
             <b-col md="3">
               <h5>
                 Unordered List
@@ -147,6 +147,7 @@
                 <li>List Item</li>
               </ul>
             </b-col>
+
             <b-col md="3">
               <h5>
                 Ordered List
@@ -157,6 +158,7 @@
                 <li>List Item</li>
               </ol>
             </b-col>
+
             <b-col md="3">
               <h5>
                 Unstyled list
@@ -167,6 +169,7 @@
                 <li>List Item</li>
               </ul>
             </b-col>
+
             <b-col md="3">
               <h5>
                 Inline List
@@ -177,7 +180,50 @@
                 <li>List Item</li>
               </ul>
             </b-col>
+
           </b-row>
+        </div>
+
+        <div class="column">
+          <p class="title">
+            Blockquotes
+          </p>
+          <b-row>
+
+            <b-col md="6">
+              <h5>
+                Default Blockquote
+              </h5>
+              <blockquote>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                </p>
+              </blockquote>
+            </b-col>
+
+            <b-col md="6">
+              <h5>
+                Blockquote with Citation
+              </h5>
+              <blockquote>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                </p>
+                <small>Someone famous in Source Title</small>
+              </blockquote>
+            </b-col>
+
+          </b-row>
+        </div>
+
+        <div class="column">
+          <p class="title">
+            Code
+          </p>
+          <p>
+            This is <code>.css-class-as-code</code>, an example of an inline code element. Wrap inline code within a <code>&lt;code&gt;...&lt;/code&gt;</code>tag.
+          </p>
+          <pre>1. #This is an example of preformatted text. 2. #Here is another line of code</pre>
         </div>
 
       </div>
@@ -194,6 +240,9 @@ export default {
 }
 </script>
 <style scoped>
+#typography{
+  padding:30px;
+}
 #typography span{
   font-size:14px;
   font-weight:400;
@@ -202,6 +251,17 @@ export default {
 /* #typography  h1, h2, h3, h4, h5, h6{
   margin : 30px 0 15px;
 } */
+#typography .content{
+  background:#FFFFFF;
+  border-radius:6px;
+  box-shadow:0 2px 2px rgba(204, 197, 185, 0.5);
+}
+#typography .content .header{
+  padding: 25px 25px 0 20px;
+}
+#typography .content .content{
+  padding:15px;
+}
 #typography .content .content .column{
   position:relative;
   padding-left:140px;
@@ -221,10 +281,26 @@ export default {
   font-weight:400;
   font-size:14px;
 }
+#typography .content .content .column blockquote{
+  font-style:italic;
+}
 #typography .content .content .column blockquote small{
   display:block;
+  font-style:normal;
 }
 #typography .content .content .column blockquote small::before{
   content:'\2014   \A0';
+}
+#typography .content .content .column pre{
+  display:block;
+  margin:0 0 0 10px;
+  font-size:13px;
+  line-height:1.42857143;
+  color:#333;
+  word-break: break-all;
+  background-color:#f5f5f5;
+  border:1px solid #ccc;
+  border-radius:4px;
+  padding:9.5px;
 }
 </style>
