@@ -87,10 +87,97 @@
         <div class="column">
           <p class="text-muted">
             <p class="title">
-              Paragraph
+              Muted Text
             </p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
           </p>
+        </div>
+
+        <div class="column">
+          <p>
+            <p class="title">
+              Coloured Text
+            </p>
+            <p class="text-primary margin-bot">
+              Text Primary - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
+            </p>
+            <p class="text-info margin-bot">
+              Text Info - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
+            </p>
+            <p class="text-success margin-bot">
+              Text Success - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
+            </p>
+            <p class="text-warning margin-bot">
+              Text Warning - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
+            </p>
+            <p class="text-danger margin-bot">
+              Text Danger - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
+            </p>
+          </p>
+        </div>
+
+        <div class="column">
+          <h2 class="text-muted">
+            <p class="title">
+              Small Tag
+            </p>
+            Header with small subtitle
+            <br>
+            <small>".small" is a tag for the headers</small>
+          </h2>
+        </div>
+
+        <div class="column">
+          <p class="title">
+            Lists
+          </p>
+          <b-row>
+            <b-col md="3">
+              <h5>
+                Unordered List
+              </h5>
+              <ul>
+                <li>List Item</li>
+                <li>List Item</li>
+                <ul>
+                  <li>List Item</li>
+                  <li>List Item</li>
+                  <li>List Item</li>
+                </ul>
+                <li>List Item</li>
+              </ul>
+            </b-col>
+            <b-col md="3">
+              <h5>
+                Ordered List
+              </h5>
+              <ol>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+              </ol>
+            </b-col>
+            <b-col md="3">
+              <h5>
+                Unstyled list
+              </h5>
+              <ul class="list-unstyled">
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+              </ul>
+            </b-col>
+            <b-col md="3">
+              <h5>
+                Inline List
+              </h5>
+              <ul class="list-inline">
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+              </ul>
+            </b-col>
+          </b-row>
         </div>
 
       </div>
