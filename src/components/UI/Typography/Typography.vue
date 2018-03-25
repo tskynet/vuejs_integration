@@ -281,8 +281,20 @@ export default {
   font-weight:400;
   font-size:14px;
 }
+#typography .content .column .text-muted{
+  color: rgb(37,36,34) !important;
+  font-size:36.4px;
+  font-weight:400px;
+}
+#typography .content .column .text-muted small{
+  color:rgb(154,154,154);
+  font-weight:300;
+  font-size:22px;
+}
 #typography .content .content .column blockquote{
   font-style:italic;
+  border-left : 5px solid #eee;
+  padding : 10px 20px;
 }
 #typography .content .content .column blockquote small{
   display:block;
@@ -302,5 +314,15 @@ export default {
   border:1px solid #ccc;
   border-radius:4px;
   padding:9.5px;
+}
+#typography .content .content .column .list-inline{
+  padding-left:0;
+  margin-left:-5px;
+  list-style:none;
+}
+#typography .content .content .column .list-inline li {
+  display:inline-block;
+  padding-right:5px;
+  padding-left:5px;
 }
 </style>
