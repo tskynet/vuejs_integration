@@ -8,6 +8,8 @@ import UserBehavior from '@/components/UI/DashBoard/UserBehavior'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import Notifications from 'vue-notification'
+Vue.use(Notifications)
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
