@@ -8,7 +8,10 @@ npm install bootstrap-vue
 
 npm install vue-awesome
 
-npm install vue-chart-js --save
+npm install vue-chartjs chart.js --save
+
+npm install --save vue-notification
+
 
 ## Build Setup
 
