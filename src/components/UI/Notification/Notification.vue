@@ -70,7 +70,7 @@
 
       <div class="containerPluginNotif">
 
-        <PluginNotification v-bind:group="group[0]" v-bind:title="title[0]" v-bind:text="text[0]" v-bind:duration="duration[0]" v-bind:classes="classes[0]" v-bind:position="position[0]"></PluginNotification>
+        <PluginNotification v-bind:group="group" v-bind:title="title" v-bind:text="text" v-bind:duration="duration" v-bind:classes="classes" v-bind:position="position"></PluginNotification>
 
         <h5>
           Notifications Places
@@ -81,16 +81,31 @@
 
         <b-row>
           <b-col md="3">
-            <button class="btn btn-default btn-block" @click="callNotif()" >Top Left</button>
+            <button class="btn btn-default btn-block" @click="callNotif('foo', 'Important message', 'Hello user! This is a notification!', '3000',  'vue-notification success', 'top left')" >Top Left</button>
 
           </b-col>
 
           <b-col md="3">
+            <button class="btn btn-default btn-block" @click="callNotif('mid', 'Important message', 'Hello user! This is a notification!', '3000',  'vue-notification success', 'top center')" >Top Center</button>
+          </b-col>
+
+          <b-col md="3">
+            <button class="btn btn-default btn-block" @click="callNotif('foo', 'Important message', 'Hello user! This is a notification!', '3000',  'vue-notification info', 'top right')" >Top Right</button>
+          </b-col>
+        </b-row>
+
+        <b-row>
+          <b-col md="3">
+            <button class="btn btn-default btn-block" @click="callNotif('foo', 'Important message', 'Hello user! This is a notification!', '3000',  'vue-notification warn', 'bottom left')" >Bottom Left</button>
 
           </b-col>
 
           <b-col md="3">
+            <button class="btn btn-default btn-block" @click="callNotif('foo', 'Important message', 'Hello user! This is a notification!', '3000',  'vue-notification success', 'bottom center')" >Bottom Center</button>
+          </b-col>
 
+          <b-col md="3">
+            <button class="btn btn-default btn-block" @click="callNotif('foo', 'Important message', 'Hello user! This is a notification!', '3000',  'vue-notification error', 'bottom right')" >Bottom Right</button>
           </b-col>
         </b-row>
 
@@ -107,17 +122,29 @@ export default {
   },
   data () {
     return {
-      group: ['foo'],
-      title: ['title'],
-      text: ['Hello User!'],
-      duration: ['3000'],
-      classes: ['vue-notification info', 'vue-notification success', 'vue-notification warn', 'vue-notification success'],
-      position: ['top right']
+      group: '',
+      title: '',
+      text: '',
+      duration: '',
+      classes: '',
+      position: ''
     }
   },
   methods: {
-    callNotif () {
-      alert('test')
+    callNotif (group, title, text, duration, classes, position) {
+      this.group = group
+      this.title = title
+      this.text = text
+      this.duration = duration
+      this.classes = classes
+      this.position = position
+      this.$notify({
+        group: group,
+        title: title,
+        text: text,
+        classes: classes,
+        position: position
+      })
     }
   }
 }
@@ -129,6 +156,7 @@ export default {
 #notification .contentNotif{
   background:white;
   border-radius:6px;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5)
 }
 #notification .contentNotif .headerNotif{
   padding: 15px 15px 10px 15px;
@@ -205,6 +233,9 @@ export default {
 #notification .contentNotif .containerPluginNotif{
 padding: 15px 15px 10px 15px;
 }
+#notification .contentNotif .containerPluginNotif h5{
+  margin: 10px 0 15px 0;
+}
 #notification .contentNotif .containerPluginNotif h5 .subtitle{
   color:#9A9A9A;
   font-size:14px;
@@ -218,10 +249,19 @@ padding: 15px 15px 10px 15px;
   font-size:14px;
   font-weight:500;
   padding: 7px 18px;
+  margin-bottom:30px;
+  background:transparent;
+  border :  2px solid #66615B;
 }
 #notification .contentNotif .containerPluginNotif .btn:hover{
   background-color:#66615B;
   border-color:#66615B;
   color:rgba(255,255,255,0.7);
+}
+#notification .contentNotif .containerPluginNotif .btn:focus{
+  box-shadow: none;
+}
+#notification .contentNotif .containerPluginNotif .btn:active{
+  background:rgba(255,255,255,0.7);
 }
 </style>

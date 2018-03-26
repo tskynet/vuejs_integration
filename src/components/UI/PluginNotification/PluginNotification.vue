@@ -1,16 +1,5 @@
 <template>
   <div id="pluginNotification">
-    <!-- <div class="content alert-info">
-      <button class="close" type="button" aria-hidden="true">×</button>
-      <b-row>
-        <b-col md="2">
-          <i class="ti-gift"></i>
-        </b-col>
-        <b-col md="10">
-          <div class="test">Welcome to <b>Paper Dashboard</b> - a beautiful freebie for every web developer.</div>
-        </b-col>
-      </b-row>
-    </div> -->
     <notifications :group="group" :title="title" :message="text" :duration="parseInt(duration)" :classes="String(classes)" :position="position" />
   </div>
 </template>
@@ -19,17 +8,7 @@ export default {
   name: 'PluginNotification',
   props: ['group', 'title', 'text', 'duration', 'classes', 'position'],
   data: () => ({
-  }),
-  mounted () {
-    this.$notify({
-      group: 'foo',
-      title: 'Important message',
-      text: 'Hello user! This is a notification!',
-      classes: 'vue-notification warn',
-      position: 'top left',
-      reverse: true
-    })
-  }
+  })
 }
 </script>
  <style scoped>
@@ -66,30 +45,5 @@ export default {
   text-shadow:0 1px 0 #fff;
   opacity: .2;
   color:#000;
-}
-.vue-notification {
-  padding: 10px;
-  margin: 0 5px 5px;
-  z-index:999;
-  font-size: 12px;
-
-  color: #ffffff;
-  background: #44A4FC;
-  border-left: 5px solid #187FE7;
-
-  &.warn {
-    background: #ffb648;
-    border-left-color: #f48a06;
-  }
-
-  &.error {
-    background: #E54D42;
-    border-left-color: #B82E24;
-  }
-
-  &.success {
-    background: #68CD86;
-    border-left-color: #42A85F;
-  }
 }
 </style>
