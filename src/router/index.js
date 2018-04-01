@@ -12,6 +12,7 @@ import TableListContainer from '@/components/UI/TableList/TableListContainer'
 import IconList from '@/components/UI/IconList/IconList'
 import Notification from '@/components/UI/Notification/Notification'
 import Typography from '@/components/UI/Typography/Typography'
+import Map from '@/components/UI/Map/Map'
 Vue.use(Router)
 
 export default new Router({
@@ -77,6 +78,11 @@ export default new Router({
       path: 'testtypo',
       component: Typography,
       name: 'Typography'
+    },
+    {
+      path: 'map',
+      component: Map,
+      name: 'Map'
     }
   ]
 })

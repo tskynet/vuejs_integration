@@ -12,6 +12,7 @@ npm install vue-chartjs chart.js --save
 
 npm install --save vue-notification
 
+npm install --save vue-google-maps-location-selector
 
 ## Build Setup
 
