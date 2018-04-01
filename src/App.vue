@@ -1,28 +1,26 @@
 <template>
   <div id="app">
     <div>
-      <div class="sideBar">
-        <div class="logo">
-          <div class="logo-img">
-            <img src="static/img/vue-logo.png" alt="" />
+        <div class="sideBar" id="leftBar">
+            <div class="logo">
+              <div class="logo-img">
+                <img src="static/img/vue-logo.png" alt="" />
 
-          </div>
-          <span>Paper Dashboard</span>
+              </div>
+              <span>Paper Dashboard</span>
+            </div>
+            <ul class="navLink">
+              <li><a href="#"><router-link :to="{name:'ContainerDashBoard'}"><i class="ti-panel"></i>dashboard</router-link></a></li>
+              <li><a href="#"><router-link :to="{name:'UserProfileContainer'}"><i class="ti-user"></i>user profile</router-link></a></li>
+              <li><a href="#"><router-link :to="{name:'TableListContainer'}"><i class="ti-view-list-alt"></i>table list</router-link></a></li>
+              <li><a href="#"><router-link :to="{name:'Typography'}"><i class="ti-text"></i>typography</router-link></a></li>
+              <li><a href="#"><router-link :to="{name:'IconList'}"><i class="ti-pencil-alt2"></i>icons</router-link></a></li>
+              <li><a href="#"><i class="ti-map"></i>maps</a></li>
+              <li><a href="#"><router-link :to="{name:'Notification'}"><i class="ti-bell"></i>notifications</router-link></a></li>
+            </ul>
         </div>
-        <ul class="navLink">
-          <li><a href="#"><router-link :to="{name:'ContainerDashBoard'}"><i class="ti-panel"></i>dashboard</router-link></a></li>
-          <li><a href="#"><router-link :to="{name:'UserProfileContainer'}"><i class="ti-user"></i>user profile</router-link></a></li>
-          <li><a href="#"><router-link :to="{name:'TableListContainer'}"><i class="ti-view-list-alt"></i>table list</router-link></a></li>
-          <li><a href="#"><router-link :to="{name:'Typography'}"><i class="ti-text"></i>typography</router-link></a></li>
-          <li><a href="#"><router-link :to="{name:'IconList'}"><i class="ti-pencil-alt2"></i>icons</router-link></a></li>
-          <li><a href="#"><i class="ti-map"></i>maps</a></li>
-          <li><a href="#"><router-link :to="{name:'Notification'}"><i class="ti-bell"></i>notifications</router-link></a></li>
-          <li><a href="#"><router-link :to="{name:'PluginNotification'}"><i class="ti-bell"></i>notificationsplugin</router-link></a></li>
-        </ul>
 
-
-      </div>
-      <div class="mainPanel">
+      <div class="mainPanel" id="rightBar">
         <div class="navBar">
           <div class="containerNavBar">
             <div class="navBarLeft">
@@ -53,6 +51,7 @@
 
       </div>
     </div>
+    <div style="clear:both"></div>
   </div>
 </template>
 
@@ -95,6 +94,10 @@ export default {
   font-size:14px;
   font-weight:600;
   text-align:left;
+  width:calc(100% - 40px);
+  margin-left:20px;
+  margin-right:20px;
+  border-bottom:1px solid rgba(255, 255, 255, 0.3);
 }
 #app .sideBar .logo-img{
   background:white;
@@ -104,14 +107,11 @@ export default {
   width:40px;
   text-align:center;
   line-height:40px;
-  margin-left:20px;
-  margin-right:20px;
 }
 #app .sideBar .logo-img img{
   max-width:21px;
   text-align:center;
 }
-
 #app .sideBar .navLink{
   list-style:none;
   padding:0;
