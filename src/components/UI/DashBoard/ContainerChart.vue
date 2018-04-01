@@ -1,49 +1,14 @@
 <template>
   <div id="containerChart">
-    <header>
-      <p class="title">User Behavior</p>
-      <p>24 Hours performance</p>
-    </header>
-    <div class="">
-      <chart-line-item v-bind:data="this.usersChart.data" v-bind:options="this.usersChart.options" ></chart-line-item>
-      <div class="footer">
-        <div>
-          <icon name="circle" class="circle"></icon>
-          <span>Open</span>
-          <icon name="circle" class="circle"></icon>
-          <span>Click</span>
-          <icon name="circle" class="circle"></icon>
-          <span>Click Second Time</span>
-        </div>
-        <hr>
-        <div class="update">
-          <icon class="iconFooter" name="clock-o"></icon>
-          <span>Updated 3 minutes ago</span>
-        </div>
-      </div>
-    </div>
-    <b-row>
-      <b-col md="6" xs="12">
-        <chart-donut-item v-bind:data="this.emailChart.data" v-bind:options="this.emailChart.options"></chart-donut-item>
-        <div class="footer">
-          <div>
-            <icon name="circle" class="circle"></icon>
-            <span>Open</span>
-            <icon name="circle" class="circle"></icon>
-            <span>Bounce</span>
-            <icon name="circle" class="circle"></icon>
-            <span>Unsubscribe</span>
-          </div>
-          <hr>
-          <div class="update">
-            <icon class="iconFooter" name="clock-o"></icon>
-            <span>Updated 3 minutes ago</span>
-          </div>
-        </div>
-      </b-col>
 
-      <b-col md="6" xs="12">
-        <chart-bar-item v-bind:data="this.barChart.data" v-bind:options="this.barChart.options"></chart-bar-item>
+    <div class="firstChart">
+
+      <header>
+        <p class="title">User Behavior</p>
+        <p>24 Hours performance</p>
+      </header>
+      <div class="content">
+        <chart-line-item v-bind:data="this.usersChart.data" v-bind:options="this.usersChart.options" ></chart-line-item>
         <div class="footer">
           <div>
             <icon name="circle" class="circle"></icon>
@@ -59,9 +24,64 @@
             <span>Updated 3 minutes ago</span>
           </div>
         </div>
+      </div>
+
+    </div>
+
+
+    <b-row>
+      <b-col md="6" xs="12">
+        <div class="midChart">
+          <header>
+            <p class="title">Email Statistics</p>
+            <p>Last campaign performance</p>
+          </header>
+          <chart-donut-item v-bind:data="this.emailChart.data" v-bind:options="this.emailChart.options"></chart-donut-item>
+          <div class="footer">
+            <div>
+              <icon name="circle" class="circle"></icon>
+              <span>Open</span>
+              <icon name="circle" class="circle"></icon>
+              <span>Bounce</span>
+              <icon name="circle" class="circle"></icon>
+              <span>Unsubscribe</span>
+            </div>
+            <hr>
+            <div class="update">
+              <icon class="iconFooter" name="clock-o"></icon>
+              <span>Updated 3 minutes ago</span>
+            </div>
+          </div>
+        </div>
+      </b-col>
+
+      <b-col md="6" xs="12">
+        <div class="midChart">
+          <header>
+            <p class="title">2015 Sales</p>
+            <p>All products including Taxes</p>
+          </header>
+          <chart-bar-item v-bind:data="this.barChart.data" v-bind:options="this.barChart.options"></chart-bar-item>
+          <div class="footer">
+            <div>
+              <icon name="circle" class="circle"></icon>
+              <span>Open</span>
+              <icon name="circle" class="circle"></icon>
+              <span>Click</span>
+              <icon name="circle" class="circle"></icon>
+              <span>Click Second Time</span>
+            </div>
+            <hr>
+            <div class="update">
+              <icon class="iconFooter" name="clock-o"></icon>
+              <span>Updated 3 minutes ago</span>
+            </div>
+          </div>
+        </div>
       </b-col>
     </b-row>
 
+    <div style="clear:both"></div>
   </div>
 </template>
 <script>
@@ -144,10 +164,19 @@ export default {
 <style scoped>
 #containerChart{
   font-size:14px;
-  background: white;
+}
+#containerChart .firstChart{
+  background:white;
+  padding: 15px 15px 10px 15px;
   border-radius : 6px;
   box-shadow : 0 2px 2px rgba(204, 197, 185, 0.5);
+  margin-bottom: 20px;
+}
+#containerChart .midChart{
+  background:white;
   padding: 15px 15px 10px 15px;
+  border-radius : 6px;
+  box-shadow : 0 2px 2px rgba(204, 197, 185, 0.5);
 }
 #containerChart header{
   padding : 20px 20px 0px 20px;

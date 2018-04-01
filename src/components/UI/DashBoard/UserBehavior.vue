@@ -1,10 +1,6 @@
 <template>
   <div id="userBehavior">
     <div class="content">
-      <header>
-        <p class="title">User Behavior</p>
-        <p>24 Hours performance</p>
-      </header>
       <div class="main">
         <ContainerChart></ContainerChart>
       </div>
@@ -37,9 +33,6 @@ export default {
   box-shadow : 0 2px 2px rgba(204, 197, 185, 0.5);
   padding: 15px 15px 10px 15px;
 }
-#userBehavior .content{
-  background:white;
-}
 #userBehavior header{
   padding : 20px 20px 0px 20px;
 }
@@ -51,11 +44,5 @@ export default {
 }
 #userBehavior header p{
   color: rgb(154, 154, 154);
-}
-#userBehavior .main{
-  height: 245px;
-}
-#userBehavior .main .chart{
-  height: 245px;
 }
 </style>
