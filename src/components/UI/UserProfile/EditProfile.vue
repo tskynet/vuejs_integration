@@ -107,4 +107,23 @@ export default {
   border-radius: 6px;
   box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
 }
+#editProfile .form-control{
+  background:rgb(255,252,245);
+}
+#editProfile .form-control[disabled]{
+  background:#E3E3E3;
+  color: #9A9A9A;
+}
+#editProfile button{
+  background-color: #68B3C8;
+  color: #FFF;
+  border:1px solid #46b8da;
+  border-radius:20px;
+  font-size:14px;
+  padding: 7px 18px 7px 18px;
+}
+#editProfile button:hover{
+  background-color:#3091B2;
+  border-color:#3091B2;
+}
 </style>
