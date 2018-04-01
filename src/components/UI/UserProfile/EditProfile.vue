@@ -61,7 +61,7 @@
         <b-row>
           <b-col>
             <b-form-group id="aboutEdit" label="About Me">
-              <b-form-textarea id="aboutArea" v-model="form.aboutme" placeholder="" :rows="5" :max-rows="5" no-resize="true"></b-form-textarea>
+              <b-form-textarea id="aboutArea" v-model="form.aboutme" placeholder="" :rows="5" :max-rows="5" :no-resize="true"></b-form-textarea>
             </b-form-group>
           </b-col>
         </b-row>
