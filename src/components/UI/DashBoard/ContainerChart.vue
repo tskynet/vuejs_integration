@@ -28,7 +28,7 @@ export default {
       data: LINE_CHART_DATA_DEFAULT,
       options: {
         responsive: true,
-        maintainAspectRatio: true
+        maintainAspectRatio: false
       }
     }
   }),
