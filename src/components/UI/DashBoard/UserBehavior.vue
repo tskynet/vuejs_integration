@@ -1,27 +1,14 @@
 <template>
   <div id="userBehavior">
-    <header>
-      <p class="title">User Behavior</p>
-      <p>24 Hours performance</p>
-    </header>
-    <div class="main">
-      <ContainerChart></ContainerChart>
+    <div class="content">
+      <header>
+        <p class="title">User Behavior</p>
+        <p>24 Hours performance</p>
+      </header>
+      <div class="main">
+        <ContainerChart></ContainerChart>
+      </div>
     </div>
-    <footer>
-      <div>
-        <icon name="circle" class="circle"></icon>
-        <span>Open</span>
-        <icon name="circle" class="circle"></icon>
-        <span>Click</span>
-        <icon name="circle" class="circle"></icon>
-        <span>Click Second Time</span>
-      </div>
-      <hr>
-      <div class="update">
-        <icon class="iconFooter" name="clock-o"></icon>
-        <span>Updated 3 minutes ago</span>
-      </div>
-    </footer>
   </div>
 </template>
 <script>
@@ -46,10 +33,12 @@ export default {
 <style scoped>
 #userBehavior{
   font-size:14px;
-  background: white;
   border-radius : 6px;
   box-shadow : 0 2px 2px rgba(204, 197, 185, 0.5);
   padding: 15px 15px 10px 15px;
+}
+#userBehavior .content{
+  background:white;
 }
 #userBehavior header{
   padding : 20px 20px 0px 20px;
@@ -68,35 +57,5 @@ export default {
 }
 #userBehavior .main .chart{
   height: 245px;
-}
-#userBehavior footer{
-  font-size: 14px;
-}
-#userBehavior footer hr{
-  margin : 5px 0 5px 0;
-}
-@userBehavior footer .circle{
-  width: 21px;
-  height:14px;
-}
-#userBehavior footer .circle:nth-child(1){
-  color : #81CDEC;
-}
-#userBehavior footer .circle:nth-child(2){
-  color : #EB5E28;
-}
-#userBehavior footer .circle:nth-child(3){
-  color : #F3BB45;
-}
-#userBehavior footer .update{
-  color : rgb(169, 169, 169);
-}
-#userBehavior footer .update .iconFooter{
-  height:20px;
-  width:16px;
-  vertical-align:-70%;
-}
-#userBehavior footer .update span{
-  vertical-align:-50%;
 }
 </style>

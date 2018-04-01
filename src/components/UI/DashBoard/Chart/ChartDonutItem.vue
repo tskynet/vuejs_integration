@@ -1,8 +1,8 @@
 <script>
-import { Line } from 'vue-chartjs'
+import { Doughnut } from 'vue-chartjs'
 export default {
-  name: 'ChartItem',
-  extends: Line,
+  name: 'ChartDonutItem',
+  extends: Doughnut,
   props: ['data', 'options'],
   mounted () {
     this.renderChart(this.data, this.options)
