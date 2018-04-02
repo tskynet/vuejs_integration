@@ -4,7 +4,6 @@ import Hash from '@/components/hash/Hash'
 import HashMd5 from '@/components/hash/HashMd5'
 import HashSha1 from '@/components/hash/HashSha1'
 import HashSha256 from '@/components/hash/HashSha256'
-import SideBar from '@/components/UI/SideBar/SideBar'
 import ContainerDashBoard from '@/components/UI/DashBoard/ContainerDashBoard'
 import UserBehavior from '@/components/UI/DashBoard/UserBehavior'
 import UserProfileContainer from '@/components/UI/UserProfile/UserProfileContainer'
@@ -20,8 +19,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'SideBar',
-      component: SideBar
+      name: 'ContainerDashBoard',
+      component: ContainerDashBoard
     },
     {
       path: '/hash',
@@ -60,17 +59,17 @@ export default new Router({
       name: 'UserProfileContainer'
     },
     {
-      path: 'testTable',
+      path: 'testtable',
       component: TableListContainer,
       name: 'TableListContainer'
     },
     {
-      path: 'testIcon',
+      path: 'testicon',
       component: IconList,
       name: 'IconList'
     },
     {
-      path: 'testNotification',
+      path: 'testnotification',
       component: Notification,
       name: 'Notification'
     },

@@ -1,24 +1,28 @@
 <template>
   <div id="app">
     <div>
-        <div class="sideBar" id="leftBar">
-            <div class="logo">
-              <div class="logo-img">
-                <img src="static/img/vue-logo.png" alt="" />
+        <div class="contentLeft">
+          <div class="sideBar" id="leftBar">
+              <div class="logo" v-on:click="movingArrow('dashboard')">
+                <div class="logo-img">
+                  <img src="static/img/vue-logo.png" alt="" />
 
+                </div>
+                <router-link :to="{name:'ContainerDashBoard'}">Paper Dashboard</router-link>
               </div>
-              <router-link :to="{name:'ContainerDashBoard'}">Paper Dashboard</router-link>
-            </div>
-            <ul class="navLink">
-              <li><router-link :to="{name:'ContainerDashBoard'}"><i class="ti-panel"></i>dashboard</router-link></li>
-              <li><router-link :to="{name:'UserProfileContainer'}"><i class="ti-user"></i>user profile</router-link></li>
-              <li><router-link :to="{name:'TableListContainer'}"><i class="ti-view-list-alt"></i>table list</router-link></li>
-              <li><router-link :to="{name:'Typography'}"><i class="ti-text"></i>typography</router-link></li>
-              <li><router-link :to="{name:'IconList'}"><i class="ti-pencil-alt2"></i>icons</router-link></li>
-              <li><router-link :to="{name:'Map'}"><i class="ti-map"></i>maps</router-link></li>
-              <li><router-link :to="{name:'Notification'}"><i class="ti-bell"></i>notifications</router-link></li>
-            </ul>
+              <ul class="navLink">
+                <li v-on:click="movingArrow('dashboard')"><router-link :to="{name:'ContainerDashBoard'}"><i class="ti-panel"></i>dashboard</router-link></li>
+                <li v-on:click="movingArrow('userprofile')"><router-link :to="{name:'UserProfileContainer'}"><i class="ti-user"></i>user profile</router-link></li>
+                <li v-on:click="movingArrow('tablelist')"><router-link :to="{name:'TableListContainer'}"><i class="ti-view-list-alt"></i>table list</router-link></li>
+                <li v-on:click="movingArrow('typography')"><router-link :to="{name:'Typography'}"><i class="ti-text"></i>typography</router-link></li>
+                <li v-on:click="movingArrow('icons')"><router-link :to="{name:'IconList'}"><i class="ti-pencil-alt2"></i>icons</router-link></li>
+                <li v-on:click="movingArrow('map')"><router-link :to="{name:'Map'}"><i class="ti-map"></i>maps</router-link></li>
+                <li v-on:click="movingArrow('notifications')"><router-link :to="{name:'Notification'}"><i class="ti-bell"></i>notifications</router-link></li>
+              </ul>
+              <div class="movingArrow " :class="arrow"></div>
+          </div>
         </div>
+
 
       <div class="mainPanel" id="rightBar">
         <div class="navBar">
@@ -66,6 +70,30 @@ export default {
   components: {
     Icon,
     Footer
+  },
+  data: () => ({
+    arrow: ''
+  }),
+  mounted () {
+  },
+  methods: {
+    movingArrow (location) {
+      if (location === 'userprofile' && (window.location.pathname === '/testprofile')) {
+        this.arrow = 'movingArrowUserProfile'
+      } else if (location === 'dashboard' && (window.location.pathname === '/')) {
+        this.arrow = 'movingArrowDashboard'
+      } else if (location === 'tablelist' && (window.location.pathname === '/testtable')) {
+        this.arrow = 'movingArrowTableList'
+      } else if (location === 'typography' && (window.location.pathname === '/testtypo')) {
+        this.arrow = 'movingArrowTypography'
+      } else if (location === 'icons' && (window.location.pathname === '/testicon')) {
+        this.arrow = 'movingArrowIcons'
+      } else if (location === 'map' && (window.location.pathname === '/map')) {
+        this.arrow = 'movingArrowMaps'
+      } else if (location === 'notifications' && (window.location.pathname === '/testnotification')) {
+        this.arrow = 'movingArrowNotifications'
+      }
+    }
   }
 }
 </script>
@@ -85,12 +113,15 @@ export default {
 #app a{
   font-family: 'Muli', Helvetica, Arial, sans-serif;
 }
+#app .contentLeft{
+  position:fixed;
+}
 #app .sideBar{
   background: #212120;
   color:white;
   width:260px;
   float:left;
-  position:fixed;
+  position:relative;
 }
 #app .sideBar .logo{
   padding: 13px 0 13px 0;
@@ -150,6 +181,37 @@ export default {
 #app .sideBar .navLink li a:hover{
     color:#41B883;
     text-decoration:none;
+}
+#app .sideBar .movingArrow{
+  border-right: 17px solid #f4f3ef;
+  border-top : 17px solid transparent;
+  border-bottom : 17px solid transparent;
+  display:inline-block;
+  position:absolute;
+  left: 243px;
+  top:84px;
+  transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1);
+}
+#app .sideBar .movingArrowDashboard{
+  transform:translate3d(0px, 0px, 0px);
+}
+#app .sideBar .movingArrowUserProfile{
+  transform:translate3d(0px, 60px, 0px);
+}
+#app .sideBar .movingArrowTableList{
+  transform:translate3d(0px, 120px, 0px);
+}
+#app .sideBar .movingArrowTypography{
+  transform:translate3d(0px, 180px, 0px);
+}
+#app .sideBar .movingArrowIcons{
+  transform:translate3d(0px, 240px, 0px);
+}
+#app .sideBar .movingArrowMaps{
+  transform:translate3d(0px, 300px, 0px);
+}
+#app .sideBar .movingArrowNotifications{
+  transform:translate3d(0px, 360px, 0px);
 }
 /*right side*/
 #app .mainPanel{
