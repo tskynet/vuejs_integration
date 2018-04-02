@@ -14,7 +14,8 @@
       </b-row>
       <hr>
       <footer>
-        <icon class="iconFooter" name="clock-o"></icon>
+        <!-- <icon class="iconFooter" name="clock-o"></icon> -->
+        <i :class="smallIcon" class="iconFooter"></i>
         <span>{{ cardText }}</span>
       </footer>
     </b-container>
@@ -30,7 +31,7 @@ Vue.use(Icon)
 export default {
   name: 'Card',
   // Ce Component accepte les propriétés suivantes:
-  props: ['valueText', 'cardText', 'valueName', 'icon', 'colorIcon'],
+  props: ['valueText', 'cardText', 'valueName', 'icon', 'colorIcon', 'smallIcon'],
   data: () => ({
     isTrue: true
   }),
@@ -82,9 +83,9 @@ console.log(this.icon)
   color:rgb(169,169,169);
 }
 .card footer .iconFooter{
-  height:20px;
-  width:16px;
   vertical-align:-70%;
+  font-size: 14px;
+  color:rgb(169,169,169);
 }
 .card footer span{
   vertical-align:-50%;
