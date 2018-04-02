@@ -28,7 +28,7 @@
         <div class="navBar">
           <div class="containerNavBar">
             <div class="navBarLeft">
-              <p>Overview</p>
+              <p>{{ title }}</p>
             </div>
             <div class="navBarRight">
               <ul class="nav navbar-right">
@@ -72,7 +72,8 @@ export default {
     Footer
   },
   data: () => ({
-    arrow: ''
+    arrow: '',
+    title: 'Overview'
   }),
   mounted () {
   },
@@ -80,18 +81,25 @@ export default {
     movingArrow (location) {
       if (location === 'userprofile' && (window.location.pathname === '/testprofile')) {
         this.arrow = 'movingArrowUserProfile'
+        this.title = 'Stats'
       } else if (location === 'dashboard' && (window.location.pathname === '/')) {
         this.arrow = 'movingArrowDashboard'
+        this.title = 'Overview'
       } else if (location === 'tablelist' && (window.location.pathname === '/testtable')) {
         this.arrow = 'movingArrowTableList'
+        this.title = 'Table-list'
       } else if (location === 'typography' && (window.location.pathname === '/testtypo')) {
         this.arrow = 'movingArrowTypography'
+        this.title = 'Typography'
       } else if (location === 'icons' && (window.location.pathname === '/testicon')) {
         this.arrow = 'movingArrowIcons'
+        this.title = 'Icons'
       } else if (location === 'map' && (window.location.pathname === '/map')) {
         this.arrow = 'movingArrowMaps'
+        this.title = 'Maps'
       } else if (location === 'notifications' && (window.location.pathname === '/testnotification')) {
         this.arrow = 'movingArrowNotifications'
+        this.title = 'Notifications'
       }
     }
   }
