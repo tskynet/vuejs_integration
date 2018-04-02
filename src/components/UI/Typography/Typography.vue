@@ -4,7 +4,7 @@
 
       <div class="header">
         <h4>Paper Dashboard Headings</h4>
-        <span>Created using <a href="#">Muli</a> Font Family</span>
+        <span>Created using <a href="https://www.google.com/fonts/specimen/Muli" target="_blank">Muli</a> Font Family</span>
       </div>
 
       <div class="content">

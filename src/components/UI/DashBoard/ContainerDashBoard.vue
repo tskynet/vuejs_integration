@@ -1,7 +1,9 @@
 <template>
   <div id="containerDashBoard">
-    <ContainerCard></ContainerCard>
-    <UserBehavior></UserBehavior>
+    <div class="content">
+      <ContainerCard></ContainerCard>
+      <UserBehavior></UserBehavior>
+    </div>
   </div>
 </template>
 <script>
@@ -19,4 +21,7 @@ export default {
 }
 </script>
 <style scoped>
+#containerDashBoard .content{
+  padding : 30px 15px 30px 15px;
+}
 </style>

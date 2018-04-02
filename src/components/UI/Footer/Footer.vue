@@ -10,7 +10,7 @@
       <div class="mention">
 
         <p>
-          © Coded with <i class="ti-heart"></i> by <a href="https://github.com/tskynet">Tskynet</a>. Designed by <a href="https://www.creative-tim.com/?ref=pdf-vuejs">Creative Tim</a>.
+          © Coded with <i class="ti-heart"></i> by <a href="https://github.com/tskynet" target="_blank">Tskynet</a>. Designed by <a href="https://www.creative-tim.com/?ref=pdf-vuejs" target="_blank">Creative Tim</a>.
         </p>
 
       </div>

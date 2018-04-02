@@ -75,8 +75,6 @@ export default {
     arrow: '',
     title: 'Overview'
   }),
-  mounted () {
-  },
   methods: {
     movingArrow (location) {
       if (location === 'userprofile' && (window.location.pathname === '/testprofile')) {

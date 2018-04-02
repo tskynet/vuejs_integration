@@ -30,7 +30,6 @@ export default {
 #userBehavior{
   font-size:14px;
   border-radius : 6px;
-  box-shadow : 0 2px 2px rgba(204, 197, 185, 0.5);
   padding: 15px 15px 10px 15px;
 }
 #userBehavior header{

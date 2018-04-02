@@ -3,7 +3,7 @@
     <div class="contentIcon">
       <div class="headerIcon">
         <h4>320+ Themify Icons</h4>
-        <span>Handcrafted by our friends from <a href="#">Themify</a></span>
+        <span>Handcrafted by our friends from <a href="https://themify.me/themify-icons" target="_blank">Themify</a></span>
       </div>
       <div class="allIcon">
         <div class="iconBlock">
