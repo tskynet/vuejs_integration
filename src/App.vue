@@ -7,16 +7,16 @@
                 <img src="static/img/vue-logo.png" alt="" />
 
               </div>
-              <span>Paper Dashboard</span>
+              <router-link :to="{name:'ContainerDashBoard'}">Paper Dashboard</router-link>
             </div>
             <ul class="navLink">
-              <li><a href="#"><router-link :to="{name:'ContainerDashBoard'}"><i class="ti-panel"></i>dashboard</router-link></a></li>
-              <li><a href="#"><router-link :to="{name:'UserProfileContainer'}"><i class="ti-user"></i>user profile</router-link></a></li>
-              <li><a href="#"><router-link :to="{name:'TableListContainer'}"><i class="ti-view-list-alt"></i>table list</router-link></a></li>
-              <li><a href="#"><router-link :to="{name:'Typography'}"><i class="ti-text"></i>typography</router-link></a></li>
-              <li><a href="#"><router-link :to="{name:'IconList'}"><i class="ti-pencil-alt2"></i>icons</router-link></a></li>
-              <li><a href="#"><router-link :to="{name:'Map'}"><i class="ti-map"></i>maps</router-link></a></li>
-              <li><a href="#"><router-link :to="{name:'Notification'}"><i class="ti-bell"></i>notifications</router-link></a></li>
+              <li><router-link :to="{name:'ContainerDashBoard'}"><i class="ti-panel"></i>dashboard</router-link></li>
+              <li><router-link :to="{name:'UserProfileContainer'}"><i class="ti-user"></i>user profile</router-link></li>
+              <li><router-link :to="{name:'TableListContainer'}"><i class="ti-view-list-alt"></i>table list</router-link></li>
+              <li><router-link :to="{name:'Typography'}"><i class="ti-text"></i>typography</router-link></li>
+              <li><router-link :to="{name:'IconList'}"><i class="ti-pencil-alt2"></i>icons</router-link></li>
+              <li><router-link :to="{name:'Map'}"><i class="ti-map"></i>maps</router-link></li>
+              <li><router-link :to="{name:'Notification'}"><i class="ti-bell"></i>notifications</router-link></li>
             </ul>
         </div>
 
@@ -90,6 +90,7 @@ export default {
   color:white;
   width:260px;
   float:left;
+  position:fixed;
 }
 #app .sideBar .logo{
   padding: 13px 0 13px 0;
@@ -100,6 +101,14 @@ export default {
   margin-left:20px;
   margin-right:20px;
   border-bottom:1px solid rgba(255, 255, 255, 0.3);
+}
+#app .sideBar .logo a{
+  color:white;
+  padding-left:10px;
+}
+#app .sideBar .logo a:hover{
+  text-decoration:none;
+
 }
 #app .sideBar .logo-img{
   background:white;
