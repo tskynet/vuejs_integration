@@ -20,7 +20,7 @@
           </div>
           <hr>
           <div class="update">
-            <icon class="iconFooter" name="clock-o"></icon>
+            <i class="ti-timer iconFooter"></i>
             <span>Updated 3 minutes ago</span>
           </div>
         </div>
@@ -48,8 +48,8 @@
             </div>
             <hr>
             <div class="update">
-              <icon class="iconFooter" name="clock-o"></icon>
-              <span>Updated 3 minutes ago</span>
+              <i class="ti-timer iconFooter"></i>
+              <span>Campaign set 2 days ago</span>
             </div>
           </div>
         </div>
@@ -73,8 +73,8 @@
             </div>
             <hr>
             <div class="update">
-              <icon class="iconFooter" name="clock-o"></icon>
-              <span>Updated 3 minutes ago</span>
+              <i class="ti-check iconFooter"></i>
+              <span>Data information certified</span>
             </div>
           </div>
         </div>
@@ -96,14 +96,19 @@ const LINE_CHART_DATA_DEFAULT = {
   labels: ['0', '5', '7.5', '10', '11', '12', '13', '15'],
   datasets: [{
     label: 'SES 3.4',
-    borderColor: '#0088FF',
+    borderColor: '#81CDEC',
     borderWidth: 0,
     data: ['128.940', '131.397', '132.235', '128.235', '125.636', '127.271', '125.667', '129.554']
   }, {
     label: 'SES 8.9',
-    borderColor: '#FF8800',
+    borderColor: '#EB5E28',
     borderWidth: 0,
     data: ['127.283', '125.147', '124.489', '116.783', '111.696', '110.563', '105.469', '104.332']
+  }, {
+    label: 'SES 8.9',
+    borderColor: '#F3BB45',
+    borderWidth: 0,
+    data: ['123.283', '121.147', '122.489', '115.783', '109.696', '108.563', '103.469', '102.332']
   }]
 }
 const BAR_CHART_DATA_DEFAULT = {
@@ -212,11 +217,11 @@ export default {
 #containerChart .footer .circle:nth-child(1){
   color : #81CDEC;
 }
-#containerChart .footer .circle:nth-child(2){
+#containerChart .footer .circle:nth-child(3){
   color : #EB5E28;
 }
-#containerChart .footer .circle:nth-child(3){
-  color : ##F3BB45;
+#containerChart .footer .circle:nth-child(5){
+  color : #F3BB45;
 }
 #containerChart .footer .update{
   color : rgb(169, 169, 169);
