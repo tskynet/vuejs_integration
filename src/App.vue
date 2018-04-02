@@ -48,7 +48,7 @@
           </div>
           <router-view/>
         </div>
-
+        <Footer></Footer>
       </div>
     </div>
     <div style="clear:both"></div>
@@ -59,11 +59,13 @@
 import Vue from 'vue'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
+import Footer from '@/components/UI/Footer/Footer'
 Vue.use(Icon)
 export default {
   name: 'app',
   components: {
-    Icon
+    Icon,
+    Footer
   }
 }
 </script>
