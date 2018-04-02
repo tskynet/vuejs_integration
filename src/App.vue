@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div>
-        <div class="contentLeft">
+    <div class="contentAll">
+        <div class="contentLeft" id="leftContent">
           <div class="sideBar" id="leftBar">
               <div class="logo" v-on:click="movingArrow('dashboard')">
                 <div class="logo-img">
@@ -55,7 +55,7 @@
         <Footer></Footer>
       </div>
     </div>
-    <div style="clear:both"></div>
+    <div style="clear:both">test</div>
   </div>
 </template>
 
