@@ -183,14 +183,12 @@ export default {
   border-radius : 6px;
   box-shadow : 0 2px 2px rgba(204, 197, 185, 0.5);
 }
-#containerChart header{
-  padding : 20px 20px 0px 20px;
-}
 #containerChart header .title{
   font-weight: 300;
   line-height:25.2px;
   font-size:21px;
   color: rgb(37, 36, 34);
+  margin:0;
 }
 #containerChart header p{
   color: rgb(154, 154, 154);
