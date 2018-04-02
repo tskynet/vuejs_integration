@@ -112,6 +112,7 @@ export default {
   font-family:'Muli', Helvetica, Arial, sans-serif;
   box-sizing:border-box;
   color:#66615b;
+  background: #212120;
 }
 #app h1{
   text-align:center;
