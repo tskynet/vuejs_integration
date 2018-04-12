@@ -12,7 +12,7 @@ import Vue from 'vue'
 import VueChart from 'vue-chartjs'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
-import ContainerChart from '@/components/UI/DashBoard/containerChart'
+import ContainerChart from '@/components/UI/DashBoard/ContainerChart'
 Vue.use(Icon)
 Vue.use(VueChart)
 export default {
