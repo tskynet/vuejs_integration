@@ -14,6 +14,7 @@ npm install --save vue-notification
 
 npm install vue2-leaflet --save
 
+npm install axios
 ## Build Setup
 
 ``` bash
