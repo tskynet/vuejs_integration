@@ -32,6 +32,19 @@ app.get('/add/:number1/:number2', function (req, res){
   })
 })
 
+app.get('/resumeClient', function (req, res){
+  var client = {
+    "resumeClient": {
+      "name": "Chet Faker",
+      "hashtag": "@chetfaker",
+      "description": "I like the way you work<br>it No diggity</br>I wanna bag it up"
+    }
+  }
+  res.json({
+    client
+  })
+})
+
 app.listen(port, hostname, function(){
   console.log('ready')
 })

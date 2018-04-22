@@ -35,11 +35,23 @@
   </div>
 </template>
 <script>
+import axios from 'Axios'
 export default {
   name: 'resumeClient',
   data: () => ({
-
-  })
+    name: ''
+  }),
+  mounted () {
+    axios.get('http://localhost:3000/resumeClient')
+      .then(function (reponse) {
+        console.log(reponse.data.client.resumeClient.name)
+        console.log(reponse.data.client.resumeClient.hashtag)
+        console.log(reponse.data.client.resumeClient.description)
+      })
+      .catch(function (error) {
+        console.error(error)
+      })
+  }
 }
 </script>
 <style scoped>
