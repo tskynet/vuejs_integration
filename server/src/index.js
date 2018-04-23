@@ -37,7 +37,12 @@ app.get('/resumeClient', function (req, res){
     "resumeClient": {
       "name": "Chet Faker",
       "hashtag": "@chetfaker",
-      "description": "I like the way you work<br>it No diggity</br>I wanna bag it up"
+      "description": "I like the way you work \rit No diggity \rI wanna bag it up"
+    },
+    "informationClient": {
+      "files": "12",
+      "gb": "2",
+      "spent": "24,6"
     }
   }
   res.json({

@@ -7,25 +7,26 @@
       <div class="resumeContent">
         <div class="profile">
           <img src="static/img/face.jpg" alt="photo" />
-          <h4>Chet Faker</h4>
-          <a href="#">@chetfaker</a>
+          <h4>{{ name }}</h4>
+          <a href="#">{{ hashtag }}</a>
           <p>
-            "I like the way you work<br>it No diggity</br>I wanna bag it up"
+            <!-- "I like the way you work<br>it No diggity</br>I wanna bag it up" -->
+            {{ description }}
           </p>
         </div>
         <hr>
         <div class="footerProfile">
           <b-row>
             <b-col lg="4" sm="12">
-              <h5>12</h5>
+              <h5>{{ files }}</h5>
               <span>Files</span>
             </b-col lg="4" sm="12">
             <b-col>
-              <h5>2GB</h5>
+              <h5>{{ gb }}GB</h5>
               <span>Used</span>
             </b-col lg="4" sm="12">
             <b-col>
-              <h5>24,6$</h5>
+              <h5>{{ spent }}$</h5>
               <span>Spent</span>
             </b-col>
           </b-row>
@@ -38,17 +39,28 @@
 import axios from 'Axios'
 export default {
   name: 'resumeClient',
-  data: () => ({
-    name: ''
-  }),
+  data () {
+    return {
+      name: '',
+      hashtag: '',
+      description: '',
+      files: '',
+      gb: '',
+      spent: ''
+    }
+  },
   mounted () {
     axios.get('http://localhost:3000/resumeClient')
-      .then(function (reponse) {
-        console.log(reponse.data.client.resumeClient.name)
-        console.log(reponse.data.client.resumeClient.hashtag)
-        console.log(reponse.data.client.resumeClient.description)
+      .then(reponse => {
+        this.name = reponse.data.client.resumeClient.name
+        this.hashtag = reponse.data.client.resumeClient.hashtag
+        this.description = reponse.data.client.resumeClient.description
+        console.log(reponse.data.client.informationClient)
+        this.files = reponse.data.client.informationClient.files
+        this.gb = reponse.data.client.informationClient.gb
+        this.spent = reponse.data.client.informationClient.spent
       })
-      .catch(function (error) {
+      .catch(error => {
         console.error(error)
       })
   }
